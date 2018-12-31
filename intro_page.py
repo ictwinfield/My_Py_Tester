@@ -8,9 +8,10 @@ class Intro_Page(QWidget):
         self.init_ui()
 
     def init_ui(self):
+        self.setFixedSize(700, 300)
         self.setWindowTitle('Introduction')
         self.lbl1 = QLabel('You can pick you topic and level')
-        self.lbl2 = QLabel('If you are not sure how to do a question you can check out the video')
+        self.lbl2 = QLabel('If you are not sure how to do a \n question you can check out the video')
         self.lbl3 = QLabel('The hint will help with the format of your answer')
         self.btn = QPushButton('Next')
 
@@ -22,6 +23,7 @@ class Intro_Page(QWidget):
         self.v_box.addWidget(self.lbl1)
         self.v_box.addWidget(self.lbl2)
         self.v_box.addWidget(self.lbl3)
+        self.v_box.addStretch()
         self.v_box.addLayout(self.h_box)
 
         self.setLayout(self.v_box)
